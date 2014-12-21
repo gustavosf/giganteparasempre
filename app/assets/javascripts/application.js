@@ -10,7 +10,14 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
-//= require jquery_ujs
-//= require turbolinks
+//= require template/jquery.min
+//= require template/jquery.migrate
+//= require template/jquery.imagesloaded.min
+//= require template/jquery.isotope.min
+//= require template/jquery.magnific-popup.min
+//= require template/jquery.flexslider
+//= require template/retina-1.1.0.min
+//= require template/jquery.nicescroll.min
+//= require template/script
 //= require_tree .
+
