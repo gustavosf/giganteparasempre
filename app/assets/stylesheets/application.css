@@ -1,10 +1,11 @@
 /* ...
-*= template/bootstrap
-*= template/magnific-popup
-*= template/font-awesome
-*= template/flexslider
-*= template/style
-*= template/responsive
+*= require template/bootstrap.css
+*= require template/magnific-popup
+*= require template/font-awesome
+*= require template/flexslider
+*= require template/style
+*= require template/responsive
+*= require overrides
 *= require_self
 *= require_tree .
 */
