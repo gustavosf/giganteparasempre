@@ -1,5 +1,5 @@
 /* ...
-*= require template/bootstrap.css
+*= require template/bootstrap
 *= require template/magnific-popup
 *= require template/font-awesome
 *= require template/flexslider
@@ -7,5 +7,4 @@
 *= require template/responsive
 *= require overrides
 *= require_self
-*= require_tree .
 */

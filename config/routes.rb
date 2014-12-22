@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'gallery/index'
+  get 'gallery', to: 'gallery#index'
 
   get 'home/index'
 

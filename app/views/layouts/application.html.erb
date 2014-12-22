@@ -11,7 +11,7 @@
 
 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
 
-	<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+	<%= stylesheet_link_tag "application", params[:controller], :media => "all", 'data-turbolinks-track' => true %>
 	<%= csrf_meta_tags %>
 	
 </head>
@@ -34,7 +34,8 @@
 					<li><a class="active" href="index.html">Home</a></li>
 					<li><a href="about.html">Quem Somos</a></li>
 					<li><a href="portfolio.html">Notícias</a></li>
-					<li><a href="services.html">Galeria</a></li>
+					<li><%= link_to "Fotos", gallery_path %></li>
+					<li><%= link_to "Vídeos", gallery_path %></li>
 					<li><a href="services.html">Textos</a></li>
 					<li><a href="contact.html">Loja</a></li>
 				</ul>				
@@ -48,12 +49,52 @@
 					<li><a href="#">Outubro de 2014</a></li>
 					<li><a href="#">Setembro de 2014</a></li>
 					<li><a href="#">Agosto de 2014</a></li>
-					<li><a href="#">Antes em 2014</a></li>
-					<li><a href="#">2013</a></li>
-					<li><a href="#">2012</a></li>
+					<li class="dropdown">
+						<a href="#" data-toggle="dropdown" class="dropdown-toggle">2014 <span class="caret"></span></a>
+						<ul role="menu" class="sub-menu dropdown-menu">
+							<li><a href="#">Julho</a></li>
+							<li><a href="#">Junho</a></li>
+							<li><a href="#">Maio</a></li>
+							<li><a href="#">Abril</a></li>
+							<li><a href="#">Março</a></li>
+							<li><a href="#">Fevereiro</a></li>
+							<li><a href="#">Janeiro</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" data-toggle="dropdown" class="dropdown-toggle">2013 <span class="caret"></span></a>
+						<ul role="menu" class="sub-menu dropdown-menu">
+							<li><a href="#">Dezembro</a></li>
+							<li><a href="#">Novembro</a></li>
+							<li><a href="#">Outubro</a></li>
+							<li><a href="#">Setembro</a></li>
+							<li><a href="#">Agosto</a></li>
+							<li><a href="#">Julho</a></li>
+							<li><a href="#">Junho</a></li>
+							<li><a href="#">Maio</a></li>
+							<li><a href="#">Abril</a></li>
+							<li><a href="#">Março</a></li>
+							<li><a href="#">Fevereiro</a></li>
+							<li><a href="#">Janeiro</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" data-toggle="dropdown" class="dropdown-toggle">2012 <span class="caret"></span></a>
+						<ul role="menu" class="sub-menu dropdown-menu">
+							<li><a href="#">Dezembro</a></li>
+							<li><a href="#">Novembro</a></li>
+							<li><a href="#">Outubro</a></li>
+							<li><a href="#">Setembro</a></li>
+							<li><a href="#">Agosto</a></li>
+							<li><a href="#">Julho</a></li>
+							<li><a href="#">Junho</a></li>
+							<li><a href="#">Maio</a></li>
+							<li><a href="#">Abril</a></li>
+						</ul>
+					</li>
 				</ul>				
 			</div>
-
+			<!-- 
 			<div class="categories-box">
 				<h2>Categories</h2>
 				<ul class="categories">
@@ -63,7 +104,7 @@
 					<li><a href="#">Brochures</a></li>
 				</ul>
 			</div>
-
+ 			-->
 			<div class="social-box">
 				<ul class="social-icons">
 					<li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
@@ -77,14 +118,17 @@
 					<li><a href="#"><i class="fa fa-instagram"></i></a></li>
 				</ul>
 			</div>
-			<p class="copyright">&#169; 2014 Grafika, All Rights Reserved</p>
+			<p class="copyright">&#169; <%= Time.now.year %> Grupo Gigante Para Sempre, Todos los izquierdos reservados</p>
+			<!-- <p class="copyright">Pague o IPVA</p> -->
 		</header>
 		<!-- End Header -->
 
 		<!-- content 
 			================================================== -->
 		<div id="content">
-			<%= yield %>
+			<div class="inner-content">
+				<%= yield %>
+			</div>
 		</div>
 		<!-- End content -->
 
@@ -95,7 +139,7 @@
 		<%= image_tag "preloader.gif" %>
 	</div>
 
-	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<%= javascript_include_tag "application", params[:controller], 'data-turbolinks-track' => true %>
 
 </body>
 </html>

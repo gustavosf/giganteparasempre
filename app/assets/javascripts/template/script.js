@@ -13,37 +13,38 @@ $(document).ready(function($) {
 
 
 	var winDow = $(window);
-		// Needed variables
-		var $container=$('.blog-box, .portfolio-box');
 
-		try{
-			$container.imagesLoaded( function(){
-				$container.show();
-				$container.isotope({
-					layoutMode:'masonry',
-					animationOptions:{
-						duration:750,
-						easing:'linear'
-					}
-				});
-			});
-		} catch(err) {
-		}
+	// Needed variables
+	var $container=$('.blog-box, .portfolio-box');
 
-		winDow.bind('resize', function(){
+	// try{
+	// 	$container.imagesLoaded( function(){
+	// 		$container.show();
+	// 		$container.isotope({
+	// 			layoutMode:'masonry',
+	// 			animationOptions:{
+	// 				duration:750,
+	// 				easing:'linear'
+	// 			}
+	// 		});
+	// 	});
+	// } catch(err) {
+	// }
 
-			try {
-				$container.isotope({ 
-					animationOptions: {
-						duration: 750,
-						easing	: 'linear',
-						queue	: false,
-					}
-				});
-			} catch(err) {
-			}
-			return false;
-		});
+	// winDow.bind('resize', function(){
+
+	// 	try {
+	// 		$container.isotope({ 
+	// 			animationOptions: {
+	// 				duration: 750,
+	// 				easing	: 'linear',
+	// 				queue	: false,
+	// 			}
+	// 		});
+	// 	} catch(err) {
+	// 	}
+	// 	return false;
+	// });
 
 	/*-------------------------------------------------*/
 	/* =  preloader function
@@ -114,16 +115,6 @@ $(document).ready(function($) {
 
 	}
 
-	/* ---------------------------------------------------------------------- */
-	/*	project hover effects
-	/* ---------------------------------------------------------------------- */
-
-	try {
-		var projectPost = $('.project-post ');
-		projectPost.each( function() { $(this).hoverdir(); } );
-	} catch(err) {
-
-	}
 
 	/* ---------------------------------------------------------------------- */
 	/*	Contact Map
