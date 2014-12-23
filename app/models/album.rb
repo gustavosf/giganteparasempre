@@ -5,6 +5,6 @@ class Album
   field :slug
   index({ slug: 1 }, { unique: true })
 
-  has_many :items, primary_key: :slug, foreign_key: :album
+  has_many :items, primary_key: :slug, foreign_key: :album_slug
 
 end

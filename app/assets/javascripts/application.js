@@ -21,6 +21,7 @@
 //= require template/retina-1.1.0.min
 //  require template/gmap3.min
 //= require template/bootstrap
+//= require jquery.infinitescroll
 //= require isotope
 //= require packery
 //= require template/script

@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   # Gallery
   get 'gallery', to: 'gallery#index'
   get 'gallery/:id', to: 'gallery#show'
+  get 'gallery/:id/page/:offset', to: 'gallery#page'
 
   get 'home/index'
 
