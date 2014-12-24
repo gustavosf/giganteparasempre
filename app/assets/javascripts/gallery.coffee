@@ -2,28 +2,24 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
-$(document).ready ->
-  $container = $(".portfolio-box")
-  isotope_start $container
+$container = $("[isotope]")
 
-  # $('.project-post').each () ->
-  #   $(this).hoverdir
+# $('.project-post').each () ->
+#   $(this).hoverdir
 
-  $container.infinitescroll
-    navSelector: '#page_nav'
-    nextSelector: '#page_nav a'
-    dataType: 'json'
-    appendCallback: false
-  , (json, opts) ->
-    items = []
-    $(json).each (i, item) ->
-      item.host = $container.data('host') + '/' + item.basename
-      img = $.templates("#gallery-image-tmpl").render item
-      items.push img
-      return
-
-    $container.append items
-    $container.isotope 'appended', items
+$container.infinitescroll
+  navSelector: '#page_nav'
+  nextSelector: '#page_nav a'
+  dataType: 'json'
+  appendCallback: false
+, (json, opts) ->
+  items = []
+  $(json).each (i, item) ->
+    item.host = $container.data('host') + '/' + item.basename
+    items.push $($.templates("#gallery-image-tmpl").render item)[0]
     return
-
+  
+  $('[isotope]').append items
+  $(items).imagesLoaded () ->
+    $('[isotope]').isotope 'insert', items
   return

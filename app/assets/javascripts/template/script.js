@@ -108,12 +108,12 @@ $(document).ready(function($) {
 	/*	nice scroll
 	/* ---------------------------------------------------------------------- */
 
-	try {
-		var HTMLcontainer = $("html");
-		HTMLcontainer.niceScroll();
-	} catch(err) {
+	// try {
+	// 	var HTMLcontainer = $("html");
+	// 	HTMLcontainer.niceScroll();
+	// } catch(err) {
 
-	}
+	// }
 
 
 	/* ---------------------------------------------------------------------- */

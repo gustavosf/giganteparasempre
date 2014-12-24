@@ -1,6 +1,5 @@
-
 <div class="portfolio-page">
-	<div class="portfolio-box" data-host="<%= @album.host_thumbs %>">
+	<div class="portfolio-box" isotope data-host="<%= @album.host_thumbs %>">
 
 		<div class="project-post aside-post">
 			<div class="inner-post">
@@ -21,7 +20,7 @@
 </div>
 
 <nav id="page_nav">
-  <a href="page/2"></a>
+  <a href="<%= request.original_url %>/page/2"></a>
 </nav>
 
 <script id="gallery-image-tmpl" type="text/x-jsrender">
