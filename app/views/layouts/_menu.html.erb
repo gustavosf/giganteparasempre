@@ -1,6 +1,6 @@
 <header>
 	<div class="logo-box">
-		<a class="logo" href="index.html"><%= image_tag "logo.png" %></a>
+		<%= link_to image_tag("logo.png", :class => 'logo'), :root %>
 		<p class="slogan">O Primeiro Consulado Virtual do Mundo</p>
 	</div>
 
@@ -8,65 +8,65 @@
 
 	<div class="menu-box">
 		<ul class="menu">
-			<li><a class="active" href="index.html">Home</a></li>
-			<li><a href="about.html">Quem Somos</a></li>
-			<li><a href="portfolio.html">Notícias</a></li>
+			<li><%= link_to "Home", :root %></a></li>
+			<li><%= link_to "Quem Somos", "#" %></a></li>
+			<li><%= link_to "Notícias", "#" %></a></li>
 			<li><%= link_to "Fotos", gallery_path %></li>
-			<li><%= link_to "Vídeos", gallery_path %></li>
-			<li><a href="services.html">Textos</a></li>
-			<li><a href="contact.html">Loja</a></li>
+			<li><%= link_to "Vídeos", "#" %></a></li>
+			<li><%= link_to "Textos", "#" %></a></li>
+			<li><%= link_to "Loja", "http://store.gpsbr.me", :target => '_blank' %></a></li>
 		</ul>
 	</div>
 
 	<div class="archives-box">
 		<h2>Arquivos</h2>
 		<ul class="archives">
-			<li><a href="#">Dezembro de 2014</a></li>
-			<li><a href="#">Novembro de 2014</a></li>
-			<li><a href="#">Outubro de 2014</a></li>
-			<li><a href="#">Setembro de 2014</a></li>
-			<li><a href="#">Agosto de 2014</a></li>
+			<li><a href="/gallery/dez-14">Dezembro de 2014</a></li>
+			<li><a href="/gallery/nov-14">Novembro de 2014</a></li>
+			<li><a href="/gallery/out-14">Outubro de 2014</a></li>
+			<li><a href="/gallery/set-14">Setembro de 2014</a></li>
+			<li><a href="/gallery/ago-14">Agosto de 2014</a></li>
 			<li class="dropdown">
 				<a href="#" data-toggle="dropdown" class="dropdown-toggle">2014 <span class="caret"></span></a>
 				<ul role="menu" class="sub-menu dropdown-menu">
-					<li><a href="#">Julho</a></li>
-					<li><a href="#">Junho</a></li>
-					<li><a href="#">Maio</a></li>
-					<li><a href="#">Abril</a></li>
-					<li><a href="#">Março</a></li>
-					<li><a href="#">Fevereiro</a></li>
-					<li><a href="#">Janeiro</a></li>
+					<li><a href="/gallery/jul-14">Julho</a></li>
+					<li><a href="/gallery/jun-14">Junho</a></li>
+					<li><a href="/gallery/mai-14">Maio</a></li>
+					<li><a href="/gallery/abr-14">Abril</a></li>
+					<li><a href="/gallery/mar-14">Março</a></li>
+					<li><a href="/gallery/fev-14">Fevereiro</a></li>
+					<li><a href="/gallery/jan-14">Janeiro</a></li>
 				</ul>
 			</li>
 			<li class="dropdown">
 				<a href="#" data-toggle="dropdown" class="dropdown-toggle">2013 <span class="caret"></span></a>
 				<ul role="menu" class="sub-menu dropdown-menu">
-					<li><a href="#">Dezembro</a></li>
-					<li><a href="#">Novembro</a></li>
-					<li><a href="#">Outubro</a></li>
-					<li><a href="#">Setembro</a></li>
-					<li><a href="#">Agosto</a></li>
-					<li><a href="#">Julho</a></li>
-					<li><a href="#">Junho</a></li>
-					<li><a href="#">Maio</a></li>
-					<li><a href="#">Abril</a></li>
-					<li><a href="#">Março</a></li>
-					<li><a href="#">Fevereiro</a></li>
-					<li><a href="#">Janeiro</a></li>
+					<li><a href="/gallery/dez-13">Dezembro</a></li>
+					<li><a href="/gallery/nov-13">Novembro</a></li>
+					<li><a href="/gallery/out-13">Outubro</a></li>
+					<li><a href="/gallery/set-13">Setembro</a></li>
+					<li><a href="/gallery/ago-13">Agosto</a></li>
+					<li><a href="/gallery/jul-13">Julho</a></li>
+					<li><a href="/gallery/jun-13">Junho</a></li>
+					<li><a href="/gallery/mai-13">Maio</a></li>
+					<li><a href="/gallery/abr-13">Abril</a></li>
+					<li><a href="/gallery/mar-13">Março</a></li>
+					<li><a href="/gallery/fev-13">Fevereiro</a></li>
+					<li><a href="/gallery/jan-13">Janeiro</a></li>
 				</ul>
 			</li>
 			<li class="dropdown">
 				<a href="#" data-toggle="dropdown" class="dropdown-toggle">2012 <span class="caret"></span></a>
 				<ul role="menu" class="sub-menu dropdown-menu">
-					<li><a href="#">Dezembro</a></li>
-					<li><a href="#">Novembro</a></li>
-					<li><a href="#">Outubro</a></li>
-					<li><a href="#">Setembro</a></li>
-					<li><a href="#">Agosto</a></li>
-					<li><a href="#">Julho</a></li>
-					<li><a href="#">Junho</a></li>
-					<li><a href="#">Maio</a></li>
-					<li><a href="#">Abril</a></li>
+					<li><a href="/gallery/dez-12">Dezembro</a></li>
+					<li><a href="/gallery/nov-12">Novembro</a></li>
+					<li><a href="/gallery/out-12">Outubro</a></li>
+					<li><a href="/gallery/set-12">Setembro</a></li>
+					<li><a href="/gallery/ago-12">Agosto</a></li>
+					<li><a href="/gallery/jul-12">Julho</a></li>
+					<li><a href="/gallery/jun-12">Junho</a></li>
+					<li><a href="/gallery/mai-12">Maio</a></li>
+					<li><a href="/gallery/abr-12">Abril</a></li>
 				</ul>
 			</li>
 		</ul>
@@ -84,15 +84,15 @@
 		-->
 	<div class="social-box">
 		<ul class="social-icons">
-			<li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
-			<li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
-			<li><a href="#"><i class="fa fa-rss-square"></i></a></li>
-			<li><a href="#"><i class="fa fa-google-plus-square"></i></a></li>
-			<li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
-			<li><a href="#"><i class="fa fa-pinterest-square"></i></a></li>
-			<li><a href="#"><i class="fa fa-flickr"></i></a></li>
-			<li><a href="#"><i class="fa fa-youtube-square"></i></a></li>
-			<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+			<li><a href="https://www.facebook.com/BeiraRioGiganteParaSempreSci" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
+			<li><a href="https://twitter.com/beirariogps" target="_blank"><i class="fa fa-twitter-square"></i></a></li>
+			<!-- <li><a href="#" target="_blank"><i class="fa fa-rss-square"></i></a></li> -->
+			<li><a href="https://plus.google.com/107208578093155156027" target="_blank"><i class="fa fa-google-plus-square"></i></a></li>
+			<!-- <li><a href="#" target="_blank"><i class="fa fa-linkedin-square"></i></a></li> -->
+			<!-- <li><a href="#" target="_blank"><i class="fa fa-pinterest-square"></i></a></li> -->
+			<!-- <li><a href="https://vimeo.com/grupogps" target="_blank"><i class="fa fa-vimeo"></i></a></li> -->
+			<li><a href="https://www.youtube.com/user/beirariogps" target="_blank"><i class="fa fa-youtube-square"></i></a></li>
+			<li><a href="http://instagram.com/giganteparasempre" target="_blank"><i class="fa fa-instagram"></i></a></li>
 		</ul>
 	</div>
 	<p class="copyright">&#169; <%= Time.now.year %> Grupo Gigante Para Sempre, Todos los izquierdos reservados</p>
