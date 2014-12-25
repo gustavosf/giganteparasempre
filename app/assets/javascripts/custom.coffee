@@ -23,3 +23,6 @@ $(window).bind 'resize', () ->
 $container.magnificPopup
 	type: 'image'
 	delegate: '.zoom, .zoom-image'
+
+$('body').delegate '[anchor]', 'click', (e) ->
+	window.location.href = $(this).data('href')

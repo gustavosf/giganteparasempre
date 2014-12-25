@@ -1,5 +1,7 @@
 class GalleryController < ApplicationController
+
   def index
+    @albuns = Album.all
   end
 
   def show

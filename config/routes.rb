@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
 
+  root to: 'home#index'
+  
   # Gallery
-  get 'gallery', to: 'gallery#index'
-  get 'gallery/:slug', to: 'gallery#show'
-  get 'gallery/:slug/page/:offset', to: 'gallery#page'
-
-  root 'home#index'
+  controller :gallery do
+    get 'gallery' => :index
+    get 'gallery/:slug' => :show
+    get 'gallery/:slug/page/:offset' => :page
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

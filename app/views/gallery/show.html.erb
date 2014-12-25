@@ -14,7 +14,7 @@
 
 		<% @items.each do |item| %>
 			<div class="project-post">
-				<img src="<%= @album.host + '/' + item.basename %>">
+				<img src="<%= @album.host_thumbs+ '/' + item.basename %>">
 				<div class="hover-box">		
 					<div class="project-title">		
 						<h2><%= item.author %></h2>		

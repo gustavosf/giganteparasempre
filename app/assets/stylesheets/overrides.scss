@@ -4,6 +4,9 @@ body {
 #container {
     opacity: 1!important;
 }
+.logo-box .slogan {
+    margin-top: 25px;
+}
 
 .hover-box {
     top: 0px;
@@ -46,14 +49,32 @@ ul.menu li {
     }
 }
 
-.project-post img {
+[anchor] {
+    cursor: pointer;
+}
+
+.project-post {
+    border: 1px solid white;
+    img {
         width: 100%;
         filter: none;
         -webkit-filter: none;
         -moz-filter: none;
         -ms-filter: none;
         -o-filter: none;
-        border: 1px solid white;
+    }
+    .title {
+        text-align: right;
+        position: absolute;
+        width: 100%;
+        padding: 5px 15px;
+        background: -webkit-gradient(linear, right top, left top, from(black), to(transparent));
+        color: white;
+        font-size: 16px;
+        font-family: 'Roboto', sans-serif;
+        margin-top: -32px;
+        opacity: 1;
+    }
 }
 
 .project-title {
