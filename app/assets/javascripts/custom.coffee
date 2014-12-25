@@ -18,3 +18,8 @@ $(window).bind 'resize', () ->
 			easing: 'linear'
 			queue: false
 	return false
+
+# Inclui o popup para quando o usuário clica numa imagem
+$container.magnificPopup
+	type: 'image'
+	delegate: '.zoom, .zoom-image'

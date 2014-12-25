@@ -3,15 +3,15 @@ class GalleryController < ApplicationController
   end
 
   def show
-    @album = Album.where(slug: params[:id]).first
+    @album = Album.where(slug: params[:slug]).first
     redirect_to :gallery if @album.nil?
-    @items = Item.where(album: params[:id]).limit(10)
+    @items = Item.where(album: params[:slug]).limit(20)
   end
 
   def page
-    @items = Item.where(album: params[:id])
+    @items = Item.where(album: params[:slug])
                  .limit(10)
-                 .offset(10 * params[:offset].to_i)
+                 .offset(10 + 10 * params[:offset].to_i)
     render json: @items
   end
 end

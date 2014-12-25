@@ -49,17 +49,17 @@ $(document).ready(function($) {
 	/*-------------------------------------------------*/
 	/* =  preloader function
 	/*-------------------------------------------------*/
-	var body = $('body');
-	body.addClass('active');
+	// var body = $('body');
+	// body.addClass('active');
 
-	winDow.load( function(){
-		var mainDiv = $('#container'),
-			preloader = $('.preloader');
+	// winDow.load( function(){
+	// 	var mainDiv = $('#container'),
+	// 		preloader = $('.preloader');
 
-			preloader.fadeOut(400, function(){
-				mainDiv.delay(400).addClass('active');
-			});
-	});
+	// 		preloader.fadeOut(400, function(){
+	// 			mainDiv.delay(400).addClass('active');
+	// 		});
+	// });
 
 	/*-------------------------------------------------*/
 	/* =  flexslider

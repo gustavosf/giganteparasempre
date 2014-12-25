@@ -1,5 +1,7 @@
 <div class="portfolio-page">
-	<div class="portfolio-box" isotope data-host="<%= @album.host_thumbs %>">
+	<div class="portfolio-box" isotope 
+		 data-host="<%= @album.host %>"
+		 data-host-thumbs="<%= @album.host_thumbs %>">
 
 		<div class="project-post aside-post">
 			<div class="inner-post">
@@ -12,7 +14,18 @@
 
 		<% @items.each do |item| %>
 			<div class="project-post">
-				<img src="<%= @album.host + '/' + item.download_link.match(/\/([^\/]+.jpg)/)[1] %>">
+				<img src="<%= @album.host + '/' + item.basename %>">
+				<div class="hover-box">		
+					<div class="project-title">		
+						<h2><%= item.author %></h2>		
+						<span><%= item.date %></span>		
+					</div>		
+					<ul class="project-links">		
+						<!-- <li><a href="javascript:;"><i class="fa fa-heart"></i></a></li> -->
+						<li><a href="http://facebook.com<%= item.link %>" target="_blank"><i class="fa fa-arrow-right"></i></a></li>		
+						<li><a href="<%= @album.host + '/' + item.basename %>" class="zoom-image" title="<%= item.description %>"><i class="fa fa-search"></i></a></li>		
+					</ul>		
+				</div>
 			</div>
 		<% end %>
 
@@ -25,6 +38,17 @@
 
 <script id="gallery-image-tmpl" type="text/x-jsrender">
 <div class="project-post">
-	<img src="{{:host}}">
+	<img src="{{:thumb}}">
+	<div class="hover-box">		
+		<div class="project-title">
+			<h2>{{:author}}</h2>		
+			<span>{{:date}}</span>		
+		</div>		
+		<ul class="project-links">		
+			<!--<li><a href="javascript:;"><i class="fa fa-heart"></i></a></li>-->
+			<li><a href="http://facebook.com{{:link}}" target="_blank"><i class="fa fa-arrow-right"></i></a></li>		
+			<li><a href="{{:full}}" class="zoom-image" title="{{:description}}"><i class="fa fa-search"></i></a></li>		
+		</ul>		
+	</div>
 </div>
 </script>
