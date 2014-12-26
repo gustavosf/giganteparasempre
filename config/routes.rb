@@ -9,6 +9,11 @@ Rails.application.routes.draw do
     get 'gallery/:slug/page/:offset' => :page
   end
 
+  # Content
+  controller :content do
+    get 'content' => :index
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
