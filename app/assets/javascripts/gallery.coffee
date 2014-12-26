@@ -13,7 +13,7 @@ $container.delegate '.hover-box', 'click', (e) ->
 if $container.attr('infinitescroll') != undefined
   $container.infinitescroll
     loading:
-      finished: undefined
+      finished: () ->
       finishedMsg: 'Vocẽ chegou ao fim'
       msg: null
       msgText: 'Carregando...'
@@ -35,6 +35,8 @@ if $container.attr('infinitescroll') != undefined
     $(items).hide()
     $('[isotope]').append items
     $(items).imagesLoaded () ->
+      $('#infscr-loading').fadeOut('fast');
       $(items).show()
       $('[isotope]').isotope 'insert', items
+
     return
