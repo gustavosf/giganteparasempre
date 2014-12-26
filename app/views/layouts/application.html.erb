@@ -11,91 +11,24 @@
 
 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
 
-	<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+	<%= stylesheet_link_tag "application", params[:controller], :media => "all", 'data-turbolinks-track' => true %>
 	<%= csrf_meta_tags %>
-	
+
 </head>
 <body>
 
-	<!-- Container -->
 	<div id="container">
-		<!-- Header
-		    ================================================== -->
-		<header>
-			<div class="logo-box">
-				<a class="logo" href="index.html"><%= image_tag "logo.png" %></a>
-				<p class="slogan">O Primeiro Consulado Virtual do Mundo</p>
-			</div>
+		<%= render "layouts/menu" %>
 
-			<a class="elemadded responsive-link" href="#">Menu</a>
-
-			<div class="menu-box">
-				<ul class="menu">
-					<li><a class="active" href="index.html">Home</a></li>
-					<li><a href="about.html">Quem Somos</a></li>
-					<li><a href="portfolio.html">Notícias</a></li>
-					<li><a href="services.html">Galeria</a></li>
-					<li><a href="services.html">Textos</a></li>
-					<li><a href="contact.html">Loja</a></li>
-				</ul>				
-			</div>
-
-			<div class="archives-box">
-				<h2>Arquivos</h2>
-				<ul class="archives">
-					<li><a href="#">Dezembro de 2014</a></li>
-					<li><a href="#">Novembro de 2014</a></li>
-					<li><a href="#">Outubro de 2014</a></li>
-					<li><a href="#">Setembro de 2014</a></li>
-					<li><a href="#">Agosto de 2014</a></li>
-					<li><a href="#">Antes em 2014</a></li>
-					<li><a href="#">2013</a></li>
-					<li><a href="#">2012</a></li>
-				</ul>				
-			</div>
-
-			<div class="categories-box">
-				<h2>Categories</h2>
-				<ul class="categories">
-					<li><a href="#">Photography</a></li>
-					<li><a href="#">Websites</a></li>
-					<li><a href="#">Logo Design</a></li>
-					<li><a href="#">Brochures</a></li>
-				</ul>
-			</div>
-
-			<div class="social-box">
-				<ul class="social-icons">
-					<li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
-					<li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
-					<li><a href="#"><i class="fa fa-rss-square"></i></a></li>
-					<li><a href="#"><i class="fa fa-google-plus-square"></i></a></li>
-					<li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
-					<li><a href="#"><i class="fa fa-pinterest-square"></i></a></li>
-					<li><a href="#"><i class="fa fa-flickr"></i></a></li>
-					<li><a href="#"><i class="fa fa-youtube-square"></i></a></li>
-					<li><a href="#"><i class="fa fa-instagram"></i></a></li>
-				</ul>
-			</div>
-			<p class="copyright">&#169; 2014 Grafika, All Rights Reserved</p>
-		</header>
-		<!-- End Header -->
-
-		<!-- content 
-			================================================== -->
 		<div id="content">
-			<%= yield %>
+			<div class="inner-content">
+				<%= yield %>
+			</div>
 		</div>
-		<!-- End content -->
 
 	</div>
-	<!-- End Container -->
 
-	<div class="preloader">
-		<%= image_tag "preloader.gif" %>
-	</div>
-
-	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<%= javascript_include_tag "application", params[:controller] %>
 
 </body>
 </html>

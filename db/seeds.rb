@@ -5,3 +5,16 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Album.delete_all
+Item.delete_all
+
+albuns = JSON.parse(File.read(Rails.root.join('db/seeds/albuns.json')))
+albuns.each do |album|
+  Album.create!(album)
+end
+
+items = JSON.parse(File.read(Rails.root.join('db/seeds/items.json')))
+items.each do |item|
+  Item.create!(item)
+end

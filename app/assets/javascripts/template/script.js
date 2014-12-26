@@ -13,52 +13,53 @@ $(document).ready(function($) {
 
 
 	var winDow = $(window);
-		// Needed variables
-		var $container=$('.blog-box, .portfolio-box');
 
-		try{
-			$container.imagesLoaded( function(){
-				$container.show();
-				$container.isotope({
-					layoutMode:'masonry',
-					animationOptions:{
-						duration:750,
-						easing:'linear'
-					}
-				});
-			});
-		} catch(err) {
-		}
+	// Needed variables
+	var $container=$('.blog-box, .portfolio-box');
 
-		winDow.bind('resize', function(){
+	// try{
+	// 	$container.imagesLoaded( function(){
+	// 		$container.show();
+	// 		$container.isotope({
+	// 			layoutMode:'masonry',
+	// 			animationOptions:{
+	// 				duration:750,
+	// 				easing:'linear'
+	// 			}
+	// 		});
+	// 	});
+	// } catch(err) {
+	// }
 
-			try {
-				$container.isotope({ 
-					animationOptions: {
-						duration: 750,
-						easing	: 'linear',
-						queue	: false,
-					}
-				});
-			} catch(err) {
-			}
-			return false;
-		});
+	// winDow.bind('resize', function(){
+
+	// 	try {
+	// 		$container.isotope({ 
+	// 			animationOptions: {
+	// 				duration: 750,
+	// 				easing	: 'linear',
+	// 				queue	: false,
+	// 			}
+	// 		});
+	// 	} catch(err) {
+	// 	}
+	// 	return false;
+	// });
 
 	/*-------------------------------------------------*/
 	/* =  preloader function
 	/*-------------------------------------------------*/
-	var body = $('body');
-	body.addClass('active');
+	// var body = $('body');
+	// body.addClass('active');
 
-	winDow.load( function(){
-		var mainDiv = $('#container'),
-			preloader = $('.preloader');
+	// winDow.load( function(){
+	// 	var mainDiv = $('#container'),
+	// 		preloader = $('.preloader');
 
-			preloader.fadeOut(400, function(){
-				mainDiv.delay(400).addClass('active');
-			});
-	});
+	// 		preloader.fadeOut(400, function(){
+	// 			mainDiv.delay(400).addClass('active');
+	// 		});
+	// });
 
 	/*-------------------------------------------------*/
 	/* =  flexslider
@@ -107,23 +108,13 @@ $(document).ready(function($) {
 	/*	nice scroll
 	/* ---------------------------------------------------------------------- */
 
-	try {
-		var HTMLcontainer = $("html");
-		HTMLcontainer.niceScroll();
-	} catch(err) {
+	// try {
+	// 	var HTMLcontainer = $("html");
+	// 	HTMLcontainer.niceScroll();
+	// } catch(err) {
 
-	}
+	// }
 
-	/* ---------------------------------------------------------------------- */
-	/*	project hover effects
-	/* ---------------------------------------------------------------------- */
-
-	try {
-		var projectPost = $('.project-post ');
-		projectPost.each( function() { $(this).hoverdir(); } );
-	} catch(err) {
-
-	}
 
 	/* ---------------------------------------------------------------------- */
 	/*	Contact Map
