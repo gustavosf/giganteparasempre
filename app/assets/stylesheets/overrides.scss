@@ -49,10 +49,6 @@ ul.menu li {
     }
 }
 
-[anchor] {
-    cursor: pointer;
-}
-
 .project-post {
     border: 1px solid white;
     img {
@@ -212,7 +208,7 @@ header {
     }
 }
 
-@media (max-width: 1199px) {
+@media (min-width: 767px) and (max-width: 1199px) {
     header {
         max-width: 250px;
     }
