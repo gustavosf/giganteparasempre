@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   root to: 'home#index'
-  
+
   # Gallery
   controller :gallery do
     get 'gallery' => :index
@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   # Videos
   controller :videos do
     get 'videos' => :index
+    get 'videos/page/:offset' => :page
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
