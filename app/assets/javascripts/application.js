@@ -22,6 +22,7 @@
 //  require template/gmap3.min
 //= require template/bootstrap
 //= require jquery.infinitescroll
+//= require qtip/jquery.qtip
 //= require isotope
 //= require packery
 //= require template/script

@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   # Content
   controller :content do
     get 'content' => :index
+    get 'content/:slug' => :show
+    get 'content/:id/preview' => :preview
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

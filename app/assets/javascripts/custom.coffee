@@ -1,7 +1,7 @@
 
 $container = $('[isotope]')
 
-$container.imagesLoaded () -> 
+$container.imagesLoaded () ->
 	$container.show
 	$container.isotope
 		itemSelector: '[isotope] > div'
@@ -13,7 +13,7 @@ $container.imagesLoaded () ->
 
 $(window).bind 'resize', () ->
 	$container.isotope
-		animationOptions: 
+		animationOptions:
 			duration: 750
 			easing: 'linear'
 			queue: false
@@ -23,3 +23,12 @@ $(window).bind 'resize', () ->
 $container.magnificPopup
 	type: 'image'
 	delegate: '.zoom, .zoom-image'
+
+$('[tooltip]').qtip
+  position:
+    my: 'left center'
+    at: 'right center'
+  style:
+    tip:
+      corner: true
+    classes: 'qtip-dark'

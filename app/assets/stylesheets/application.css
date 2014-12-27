@@ -5,6 +5,7 @@
 *= require template/flexslider
 *= require template/style
 *= require template/responsive
+*= require qtip/jquery.qtip
 *= require overrides
 *= require_self
 */
