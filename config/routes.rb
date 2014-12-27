@@ -16,6 +16,11 @@ Rails.application.routes.draw do
     get 'content/:id/preview' => :preview
   end
 
+  # Videos
+  controller :videos do
+    get 'videos' => :index
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
