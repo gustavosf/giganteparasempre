@@ -5,7 +5,14 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.0'
 # Use mongo as a replacement for Active Record
 gem 'mongoid', '~> 4', github: 'mongoid/mongoid'
+gem 'mongoid-encrypted-fields'
+gem 'symmetric-encryption', '~> 3.1.x'
+gem 'mongoid-slug'
 gem 'bson_ext'
+
+# markdown parser
+gem 'redcarpet'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets

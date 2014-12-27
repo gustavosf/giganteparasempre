@@ -1,0 +1,133 @@
+[{
+  "email": "gustavosf@gmail.com",
+  "password": "tmp",
+  "name": "Gustavo Seganfredo Farias",
+  "nick": "sega",
+  "slug": "gustavo",
+  "photo": "http://graph.facebook.com/segaway/picture?width=250&height=250",
+  "status": "invite",
+  "last_login": 0,
+  "social": {
+    "facebook": "http://fb.com/segaway"
+  }
+},{
+  "email": "emi.live@hotmail.com",
+  "password": "tmp",
+  "name": "Emílio Fialho",
+  "nick": "Emílio",
+  "slug": "emilio",
+  "photo": "http://graph.facebook.com/emilio.fialho.3/picture?width=250&height=250",
+  "status": "invite",
+  "last_login": 0,
+  "social": {
+    "facebook": "http://fb.com/emilio.fialho.3"
+  }
+},{
+  "email": "gus.antonello@gmail.com",
+  "password": "tmp",
+  "name": "Gustavo Antonello",
+  "nick": "Gus",
+  "slug": "mimimimi-gus",
+  "photo": "http://graph.facebook.com/gus.antonello/picture?width=250&height=250",
+  "status": "invite",
+  "last_login": 0,
+  "social": {
+    "facebook": "http://fb.com/gus.antonello"
+  }
+},{
+  "email": "monica.casarotto@gmail.com",
+  "password": "tmp",
+  "name": "Mônica Casarotto",
+  "nick": "Mozie",
+  "slug": "mozie",
+  "photo": "http://graph.facebook.com/mozie.casarotto/picture?width=250&height=250",
+  "status": "invite",
+  "last_login": 0,
+  "social": {
+    "facebook": "http://fb.com/mozie.casarotto"
+  }
+},{
+  "email": "tiago.thomascazunipadilha@facebook.com",
+  "password": "tmp",
+  "name": "Tiago Thomas Cazuni Padilha",
+  "nick": "Tiagaum",
+  "slug": "tiago-padilha",
+  "photo": "http://graph.facebook.com/tiago.thomascazunipadilha/picture?width=250&height=250",
+  "status": "invite",
+  "last_login": 0,
+  "social": {
+    "facebook": "http://fb.com/tiago.thomascazunipadilha"
+  }
+},{
+  "email": "cristhian.vargas.71@facebook.com",
+  "password": "tmp",
+  "name": "Cristhian Vargas",
+  "nick": "Cris",
+  "slug": "cris",
+  "photo": "http://graph.facebook.com/cristhian.vargas.71/picture?width=250&height=250",
+  "status": "invite",
+  "last_login": 0,
+  "social": {
+    "facebook": "http://fb.com/cristhian.vargas.71"
+  }
+},{
+  "email": "tiago.geremiaoliva@facebook.com",
+  "password": "tmp",
+  "name": "Tiago Geremia Oliva",
+  "nick": "Geremia",
+  "slug": "geremia",
+  "photo": "http://graph.facebook.com/tiago.geremiaoliva/picture?width=250&height=250",
+  "status": "invite",
+  "last_login": 0,
+  "social": {
+    "facebook": "http://fb.com/tiago.geremiaoliva"
+  }
+},{
+  "email": "re.demedeiros@facebook.com",
+  "password": "tmp",
+  "name": "Renata de Medeiros",
+  "nick": "Ren",
+  "slug": "renata",
+  "photo": "http://graph.facebook.com/re.demedeiros/picture?width=250&height=250",
+  "status": "invite",
+  "last_login": 0,
+  "social": {
+    "facebook": "http://fb.com/re.demedeiros"
+  }
+},{
+  "email": "lesnei@gmail.com",
+  "password": "tmp",
+  "name": "Lesnei de Almeida",
+  "nick": "Lesnei",
+  "slug": "lesnei",
+  "photo": "http://graph.facebook.com/lesnei/picture?width=250&height=250",
+  "status": "invite",
+  "last_login": 0,
+  "social": {
+    "facebook": "http://fb.com/lesnei"
+  }
+},{
+  "email": "henrique.bellotarantino@facebook.com",
+  "password": "tmp",
+  "name": "Henrique Bello Tarantino",
+  "nick": "Henrique",
+  "slug": "henrique",
+  "photo": "http://graph.facebook.com/henrique.bellotarantino/picture?width=250&height=250",
+  "status": "invite",
+  "last_login": 0,
+  "social": {
+    "facebook": "http://fb.com/henrique.bellotarantino"
+  }
+},{
+  "email": "tonico.veiga@facebook.com",
+  "password": "tmp",
+  "name": "Tonico Veiga",
+  "nick": "Tonico",
+  "slug": "tonico",
+  "photo": "http://graph.facebook.com/tonico.veiga/picture?width=250&height=250",
+  "status": "invite",
+  "last_login": 0,
+  "social": {
+    "facebook": "http://fb.com/tonico.veiga"
+  }
+}]
