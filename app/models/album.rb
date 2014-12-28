@@ -10,6 +10,6 @@ class Album < Element
   field :host_thumbs, type: String
 
   # index({ slug: 1 }, { unique: true })
-  # has_many :items, primary_key: :slug, foreign_key: :album_slug
+  has_many :photos, primary_key: :slug, foreign_key: :album_slug
 
 end

@@ -10,9 +10,10 @@ class GalleryController < ApplicationController
   end
 
   def page
-    @items = Item.where(album: params[:slug])
-                 .limit(15)
-                 .offset(15 * params[:offset].to_i - 15)
-    render json: @items
+    @photos = Photo.where(album: params[:slug])
+                   .order_by(likes: :desc) # Bota as mais curtidas em cima
+                   .limit(15)
+                   .offset(15 * params[:offset].to_i - 15)
+    render json: @photos
   end
 end

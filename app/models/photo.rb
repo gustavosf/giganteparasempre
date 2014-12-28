@@ -1,7 +1,7 @@
 class Photo < Element
 
   # Campos do tipo foto
-  field :link type: String
+  field :link, type: String
   field :author, type: String
   field :description, type: String
   field :date, type: String
@@ -10,13 +10,13 @@ class Photo < Element
   field :likes, type: Integer, default: 0
   field :album_slug, type: String
 
-  # belongs_to :album, primary_key: :slug, foreign_key: :album_slug
+  belongs_to :album, primary_key: :slug, foreign_key: :album_slug
 
-  def self.full
+  def full
     host + "full/#{self.album_slug}/#{self.basename}"
   end
 
-  def self.thumb
+  def thumb
     host + "thumbs/#{self.album_slug}/#{self.basename}"
   end
 
