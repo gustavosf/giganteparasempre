@@ -20,10 +20,14 @@ class Photo < Element
     host + "thumbs/#{self.album_slug}/#{self.basename}"
   end
 
+  def self.template
+    "gallery-image-tmpl"
+  end
+
   private
 
-  def host
-    "https://googledrive.com/host/0B4MkiRPnlC9uM001Xy04WEhmTEU/"
-  end
+    def host
+      "https://googledrive.com/host/0B4MkiRPnlC9uM001Xy04WEhmTEU/"
+    end
 
 end
