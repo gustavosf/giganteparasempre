@@ -13,7 +13,7 @@ class GalleryController < ApplicationController
   def page
     @items = Item.where(album: params[:slug])
                  .limit(10)
-                 .offset(10 + 10 * params[:offset].to_i)
+                 .offset(10 * params[:offset].to_i)
     render json: @items
   end
 end
