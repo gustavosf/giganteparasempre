@@ -12,5 +12,5 @@ class User
   field :status, type: Integer
   field :last_login, type: DateTime
 
-  has_many :posts
+  # has_many :posts
 end

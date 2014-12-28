@@ -1,8 +1,11 @@
-class Video
-  include Mongoid::Document
-  include Mongoid::Timestamps # Inclui e treta os campos created_at e updated_at
-  include Mongoid::Attributes::Dynamic
+class Video < Element
 
+  # Campos deste elemento
   field :uploaded, type: DateTime # Forced type coercion
   field :updated, type: DateTime # Forced type coercion
+
+  def self.template
+    "video-tmpl"
+  end
+
 end
