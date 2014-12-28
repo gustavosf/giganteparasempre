@@ -1,24 +1,5 @@
 <div class="blog-page">
-  <div class="blog-box" isotope infinitescroll data-is-template="video-tmpl">
-    <% @videos.each do |video| %>
-
-      <div class="blog-post video-post">
-        <div class="inner-post">
-          <div class="lazyYT" data-youtube-id="<%= video.id %>" data-ratio="16:9">Carregando...</div>
-          <div class="post-content">
-            <h2><a href="http://youtu.be/<%= video.id %>" target="_blank"><%= video.title %></a></h2>
-            <p><%= video.description %></p>
-            <ul class="post-tags">
-              <li><a href="#"><i class="fa fa-heart"></i><%= video.likeCount %> curtidas</a></li>
-              <li><a href="#"><i class="fa fa-comment"></i><%= video.commentCount %> comentários</a></li>
-              <li><a href="#"><i class="fa fa-calendar"></i><%= l video.uploaded, :format => "%e/%b/%Y, %H:%M" %></a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-    <% end %>
-  </div>
+  <div class="blog-box" isotope infinitescroll data-is-template="video-tmpl"></div>
 </div>
 
 <nav id="page_nav">
