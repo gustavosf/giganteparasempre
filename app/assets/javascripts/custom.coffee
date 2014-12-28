@@ -6,6 +6,13 @@ $container = $('[isotope]')
 
 if $container.length
 
+  # Esconde qualquer item que possa ainda estar carregando
+  $container.hide()
+  # E mostra apenas depois de carregar as imagens
+  $container.imagesLoaded () ->
+    $container.show()
+    $('[isotope]').isotope 'layout'
+
   # Configuração inicial do isotope
   $container.isotope
   	itemSelector: '[isotope] > div'
