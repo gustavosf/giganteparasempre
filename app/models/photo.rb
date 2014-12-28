@@ -13,21 +13,15 @@ class Photo < Element
   belongs_to :album, primary_key: :slug, foreign_key: :album_slug
 
   def full
-    host + "full/#{self.album_slug}/#{self.basename}"
+    host + "albuns/full/#{self.album_slug}/#{self.basename}"
   end
 
   def thumb
-    host + "thumbs/#{self.album_slug}/#{self.basename}"
+    host + "albuns/thumbs/#{self.album_slug}/#{self.basename}"
   end
 
   def self.template
     "gallery-image-tmpl"
   end
-
-  private
-
-    def host
-      "https://googledrive.com/host/0B4MkiRPnlC9uM001Xy04WEhmTEU/"
-    end
 
 end
