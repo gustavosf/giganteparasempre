@@ -22,6 +22,11 @@ Rails.application.routes.draw do
     get 'videos/page/:offset' => :page
   end
 
+  controller :home do
+    get 'gps-na-midia' => :gps_na_midia
+    get 'gps-na-midia/page/:offset' => :gps_na_midia_pager
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

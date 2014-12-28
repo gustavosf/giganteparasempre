@@ -28,6 +28,9 @@ module Gps
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     # config.active_record.raise_in_transactional_callbacks = true
+
+    # Host para os assets do app
+    config.assets_host = "https://googledrive.com/host/0B4MkiRPnlC9uNnhYaXN6WDNpakE/"
   end
 end
 

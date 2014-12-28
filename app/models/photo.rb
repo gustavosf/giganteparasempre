@@ -12,14 +12,6 @@ class Photo < Element
 
   belongs_to :album, primary_key: :slug, foreign_key: :album_slug
 
-  def full
-    host + "albuns/full/#{self.album_slug}/#{self.basename}"
-  end
-
-  def thumb
-    host + "albuns/thumbs/#{self.album_slug}/#{self.basename}"
-  end
-
   def self.template
     "gallery-image-tmpl"
   end

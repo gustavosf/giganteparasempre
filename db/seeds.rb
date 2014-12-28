@@ -40,3 +40,9 @@ while 1
   end
   i = i + 50
 end
+
+# Carrega links
+links = JSON.parse(File.read(Rails.root.join('db/seeds/nos-na-midia.json')))
+links.each do |link|
+  Link.create!(link)
+end

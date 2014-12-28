@@ -31,10 +31,4 @@ module ApplicationHelper
 
   end
 
-  def date_pt(date)
-
-    
-
-  end
-
 end
