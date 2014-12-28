@@ -4,9 +4,7 @@
 
       <div class="blog-post video-post">
         <div class="inner-post">
-          <!-- youtube -->
-          <iframe class="videoembed" src="http://www.youtube.com/embed/<%= video.id %>"></iframe>
-          <!-- End youtube -->
+          <div class="lazyYT" data-youtube-id="<%= video.id %>" data-ratio="16:9">Carregando...</div>
           <div class="post-content">
             <h2><a href="http://youtu.be/<%= video.id %>" target="_blank"><%= video.title %></a></h2>
             <p><%= video.description %></p>
@@ -30,7 +28,7 @@
 <script id="video-tmpl" type="text/x-jsrender">
   <div class="blog-post video-post">
     <div class="inner-post">
-      <iframe class="videoembed" src="http://www.youtube.com/embed/{{:id}}"></iframe>
+      <div class="lazyYT" data-youtube-id="{{:_id}}" data-ratio="16:9">Carregando...</div>
       <div class="post-content">
         <h2><a href="http://youtu.be/{{:id}}" target="_blank">{{:title}}</a></h2>
         <p>{{:description}}</p>

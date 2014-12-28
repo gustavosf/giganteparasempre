@@ -4,6 +4,19 @@
 
 $container = $("[isotope]")
 
+$('.lazyYT').lazyYT()
+
+$(['isotope']).imagesLoaded () ->
+  $('[isotope]').isotope 'layout'
+
+$('body').delegate 'img.videoembed', 'click', (e) ->
+  $this = $(this)
+  iframe = $('<iframe>')
+  iframe.attr 'src', 'http://youtube.com/embed/' + $this.data('yt-id') + '?autoplay=1'
+  $this.after iframe
+  $this.remove()
+  $('[isotope]').isotope 'layout'
+
 if $container.attr('infinitescroll') != undefined
   $container.infinitescroll
     loading:
@@ -26,6 +39,7 @@ if $container.attr('infinitescroll') != undefined
 
     $(items).hide()
     $('[isotope]').append items
+    $('.lazyYT').lazyYT()
     $(items).imagesLoaded () ->
       $('#infscr-loading').fadeOut('fast');
       $(items).show()
