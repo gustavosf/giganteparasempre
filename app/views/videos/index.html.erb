@@ -1,0 +1,24 @@
+<div class="blog-page">
+  <div class="blog-box" isotope infinitescroll data-is-template="video-tmpl"></div>
+</div>
+
+<nav id="page_nav">
+  <a href="<%= request.original_url %>/page/2"></a>
+</nav>
+
+<script id="video-tmpl" type="text/x-jsrender">
+  <div class="blog-post video-post">
+    <div class="inner-post">
+      <div class="lazyYT" data-youtube-id="{{:_id}}" data-ratio="16:9">Carregando...</div>
+      <div class="post-content">
+        <h2><a href="http://youtu.be/{{:id}}" target="_blank">{{:title}}</a></h2>
+        <p>{{:description}}</p>
+        <ul class="post-tags">
+          <li><a href="#"><i class="fa fa-heart"></i>{{:likeCount}} curtidas</a></li>
+          <li><a href="#"><i class="fa fa-comment"></i>{{:commentCount}} comentários</a></li>
+          <li><a href="#"><i class="fa fa-calendar"></i>{{:uploaded}}</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</script>

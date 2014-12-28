@@ -27,4 +27,5 @@
 //= require packery
 //= require template/script
 //= require jsrender
+//= require lazyYT
 //= require custom
