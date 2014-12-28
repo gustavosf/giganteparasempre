@@ -46,3 +46,9 @@ links = JSON.parse(File.read(Rails.root.join('db/seeds/nos-na-midia.json')))
 links.each do |link|
   Link.create!(link)
 end
+
+# Carrega clipping
+links = JSON.parse(File.read(Rails.root.join('db/seeds/clipping.json')))
+links.each do |link|
+  Link.create!(link)
+end

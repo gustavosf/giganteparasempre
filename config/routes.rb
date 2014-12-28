@@ -25,6 +25,8 @@ Rails.application.routes.draw do
   controller :home do
     get 'gps-na-midia' => :gps_na_midia
     get 'gps-na-midia/page/:offset' => :gps_na_midia_pager
+    get 'clipping' => :clipping
+    get 'clipping/page/:offset' => :clipping_pager
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

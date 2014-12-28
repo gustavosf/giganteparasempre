@@ -7,6 +7,13 @@ body {
 
 .lazyYT-title { display: none }
 
+.inner-post.clipping {
+  overflow: hidden;
+  img {
+    width: 109%;
+  }
+}
+
 
 .project-post-content {
   img, iframe {

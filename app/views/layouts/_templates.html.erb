@@ -34,11 +34,13 @@
 
 <script id="link-tmpl" type="text/x-jsrender">
   <div class="blog-post image-post">
-    <div class="inner-post">
-      <img alt="" src="<%= Rails.application.config.assets_host %>{{:image}}">
+    <div class="inner-post {{:group}}">
+      <img src="<%= Rails.application.config.assets_host %>{{:image}}">
       <div class="post-content">
         <h2><a href="{{:link}}" target="_blank">{{:title}}</a></h2>
-        <p>{{:headline}}</p>
+        {{if headline}}
+          <p>{{:headline}}</p>
+        {{/if}}
         <ul class="post-tags">
           <!--<li><a href="#"><i class="fa fa-heart"></i>163 likes</a></li>-->
           <!--<li><a href="#"><i class="fa fa-comment"></i>3 comments</a></li>-->
