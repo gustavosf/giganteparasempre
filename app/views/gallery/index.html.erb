@@ -13,7 +13,7 @@
 		<% @albuns.each do |album| %>
 			<div class="project-post">
 			 	<a href="<%= gallery_path + '/' + album.slug %>">
-					<img src="<%= album.photos.first.thumb %>">
+					<img src="<%= Rails.application.config.assets_host + '/albuns/thumbs/' + album.slug + '/' + album.photos.first.basename %>">
 					<div class="title"><%= album.title %></div>
 				</a>
 			</div>
