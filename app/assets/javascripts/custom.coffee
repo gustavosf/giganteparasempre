@@ -7,28 +7,29 @@ $container = $('[isotope]')
 if $container.length
 
   # Esconde qualquer item que possa ainda estar carregando
-  $container.hide()
-  # E mostra apenas depois de carregar as imagens
-  $container.imagesLoaded () ->
-    $container.show()
-    $('[isotope]').isotope 'layout'
+  $container.find('.project-post').hide()
+  $container.find('.project-post').each (i, el) ->
+    $(el).imagesLoaded () ->
+      # Vai mostrando as imagens conforme elas vão sendo carregadas
+      $(this).show()
+      $('[isotope]').isotope 'layout'
 
   # Configuração inicial do isotope
   $container.isotope
-  	itemSelector: '[isotope] > div'
-  	layoutMode: 'packery'
-  	animationOptions:
-  		duration: 750
-  		easing: 'linear'
+    itemSelector: '[isotope] > div'
+    layoutMode: 'packery'
+    animationOptions:
+      duration: 750
+      easing: 'linear'
 
   # Reconfiguração do isotope para redimencionamentos de tela
   $(window).bind 'resize', () ->
-  	$container.isotope
-  		animationOptions:
-  			duration: 750
-  			easing: 'linear'
-  			queue: false
-  	return false
+    $container.isotope
+      animationOptions:
+        duration: 750
+        easing: 'linear'
+        queue: false
+    return false
 
   if $container.attr('infinitescroll') != undefined
     # Configura o infinite scroll para buscar novos items conforme o usuário chega
