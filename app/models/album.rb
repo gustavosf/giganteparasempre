@@ -1,10 +1,15 @@
-class Album
-  include Mongoid::Document
-  include Mongoid::Attributes::Dynamic
+class Album < Element
 
-  field :slug
-  index({ slug: 1 }, { unique: true })
+  # Campos deste elemento
+  field :slug, type: String
+  field :title, type: String
+  field :description, type: String
+  field :cover, type: String
+  field :fb_link, type: String
+  field :host, type: String
+  field :host_thumbs, type: String
 
-  has_many :items, primary_key: :slug, foreign_key: :album_slug
+  # index({ slug: 1 }, { unique: true })
+  # has_many :items, primary_key: :slug, foreign_key: :album_slug
 
 end

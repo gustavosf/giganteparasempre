@@ -5,6 +5,7 @@ class ContentController < ApplicationController
 
 	def show
 		@post = Post.where(slug: params[:slug]).first
+    render :index
 	end
 
   def preview
