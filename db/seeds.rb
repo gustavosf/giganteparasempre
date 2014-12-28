@@ -32,8 +32,16 @@
 
 require 'open-uri'
 Video.delete_all
-url = 'https://gdata.youtube.com/feeds/api/videos?author=beirariogps&v=2&orderby=updated&alt=jsonc'
-videos = JSON.parse open(url).read
-videos['data']['items'].each do |video|
-  Video.create!(video)
+i = 1
+
+while 1
+  url = "https://gdata.youtube.com/feeds/api/videos?author=beirariogps&v=2&orderby=updated&alt=jsonc&max-results=50&start-index=#{i}"
+  videos = JSON.parse open(url).read
+  break if videos['data']['items'].nil?
+
+  for video in videos['data']['items'].each
+    Video.create!(video)
+  end
+
+  i = i + 50
 end
