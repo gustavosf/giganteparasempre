@@ -1,4 +1,4 @@
-<script id="Photo-tmpl" type="text/x-jsrender">
+<script id="photo-gallery-tmpl" type="text/x-jsrender">
   <div class="project-post">
     <img src="<%= Rails.application.config.assets_host %>albuns/thumbs/{{:album_slug}}/{{:basename}}">
     <div class="hover-box">
@@ -11,6 +11,15 @@
         <li><a href="http://facebook.com{{:link}}" target="_blank"><i class="fa fa-arrow-right"></i></a></li>
         <li><a href="<%= Rails.application.config.assets_host %>albuns/full/{{:album_slug}}/{{:basename}}" class="zoom-image" title="{{:description}}"><i class="fa fa-search"></i></a></li>
       </ul>
+    </div>
+  </div>
+</script>
+
+<script id="Photo-tmpl" type="text/x-jsrender">
+  <div class="blog-post photo-post">
+    <div class="inner-post">
+      <img src="<%= Rails.application.config.assets_host %>albuns/thumb/{{:album_slug}}/{{:basename}}"/>
+      <a class="zoom" href="<%= Rails.application.config.assets_host %>albuns/full/{{:album_slug}}/{{:basename}}">+</a>
     </div>
   </div>
 </script>
