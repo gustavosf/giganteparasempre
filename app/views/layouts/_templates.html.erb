@@ -1,4 +1,4 @@
-<script id="gallery-image-tmpl" type="text/x-jsrender">
+<script id="Photo-tmpl" type="text/x-jsrender">
   <div class="project-post">
     <img src="<%= Rails.application.config.assets_host %>albuns/thumbs/{{:album_slug}}/{{:basename}}">
     <div class="hover-box">
@@ -15,7 +15,7 @@
   </div>
 </script>
 
-<script id="video-tmpl" type="text/x-jsrender">
+<script id="Video-tmpl" type="text/x-jsrender">
   <div class="blog-post video-post">
     <div class="inner-post">
       <div class="lazyYT" data-youtube-id="{{:_id}}" data-ratio="16:9">Carregando...</div>
@@ -32,7 +32,7 @@
   </div>
 </script>
 
-<script id="link-tmpl" type="text/x-jsrender">
+<script id="Link-tmpl" type="text/x-jsrender">
   <div class="blog-post image-post">
     <div class="inner-post {{:group}}">
       <img src="<%= Rails.application.config.assets_host %>{{:image}}">
@@ -47,6 +47,31 @@
           <li><a href="#"><i class="fa fa-calendar"></i>{{:date}}</a></li>
         </ul>
       </div>
+    </div>
+  </div>
+</script>
+
+<script id="Post-tmpl" type="text/x-jsrender">
+  <div class="blog-post gallery-post">
+    <div class="inner-post">
+      <div class="flexslider">
+        <ul class="slides">
+          {{for images}}
+            <li>
+              <img src="{{>#data}}" />
+            </li>
+          {{/for}}
+        </ul>
+      </div>
+      <div class="post-content">
+        <h2><a href="/content/{{:slug}}">{{:title}}</a></h2>
+        <p>{{:headline}}</p>
+        <ul class="post-tags">
+          <li><a href="#"><i class="fa fa-heart"></i>{{:likes}} likes</a></li>
+          <li><a href="#"><i class="fa fa-comment"></i>{{:comments}} comments</a></li>
+          <li><a href="#"><i class="fa fa-calendar"></i>{{:published_at}}</a></li>
+        </ul>
+      </div>              
     </div>
   </div>
 </script>

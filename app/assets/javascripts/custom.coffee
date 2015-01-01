@@ -51,7 +51,9 @@ if $container.length
       # No retorno dos ítens, busca o template, e adiciona um-a-um na tela
       items = []
       $(json).each (i, item) ->
-        items.push $($.templates("#" + $container.data('is-template')).render item)[0]
+        template = $container.data('is-template') || item._type+'-tmpl';
+        console.log(template);
+        items.push $($.templates("#" + template).render item)[0]
         return
 
       # Esconde os novos items para eles só aparecerem qdo estiverem totalmente

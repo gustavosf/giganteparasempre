@@ -1,5 +1,13 @@
 class HomeController < ApplicationController
 
+  def index_pager
+                       # .where(homepage: true)
+    @elements = Element.limit(10)
+                       .where(homepage: true)
+                       .offset(10 * params[:offset].to_i - 20)
+    render json: @elements 
+  end
+
   def gps_na_midia
   end
 

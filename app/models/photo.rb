@@ -13,7 +13,7 @@ class Photo < Element
   belongs_to :album, primary_key: :slug, foreign_key: :album_slug
 
   def self.template
-    "gallery-image-tmpl"
+    "photo-tmpl"
   end
 
 end

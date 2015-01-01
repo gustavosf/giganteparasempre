@@ -23,6 +23,7 @@ Rails.application.routes.draw do
   end
 
   controller :home do
+    get '/page/:offset' => :index_pager
     get 'gps-na-midia' => :gps_na_midia
     get 'gps-na-midia/page/:offset' => :gps_na_midia_pager
     get 'clipping' => :clipping
