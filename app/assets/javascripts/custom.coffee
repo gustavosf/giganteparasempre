@@ -52,7 +52,6 @@ if $container.length
       items = []
       $(json).each (i, item) ->
         template = $container.data('is-template') || item._type+'-tmpl';
-        console.log(template);
         items.push $($.templates("#" + template).render item)[0]
         return
 

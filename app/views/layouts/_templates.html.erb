@@ -42,22 +42,32 @@
 </script>
 
 <script id="Link-tmpl" type="text/x-jsrender">
-  <div class="blog-post image-post">
-    <div class="inner-post {{:group}}">
-      <img src="<%= Rails.application.config.assets_host %>{{:image}}">
-      <div class="post-content">
-        <h2><a href="{{:link}}" target="_blank">{{:title}}</a></h2>
-        {{if headline}}
-          <p>{{:headline}}</p>
-        {{/if}}
-        <ul class="post-tags">
-          <!--<li><a href="#"><i class="fa fa-heart"></i>163 likes</a></li>-->
-          <!--<li><a href="#"><i class="fa fa-comment"></i>3 comments</a></li>-->
-          <li><a href="#"><i class="fa fa-calendar"></i>{{:date}}</a></li>
-        </ul>
+  {{if title}}
+    <div class="blog-post image-post">
+      <div class="inner-post {{:group}}">
+        <img src="<%= Rails.application.config.assets_host %>{{:image}}">
+        <div class="post-content">
+          <h2><a href="{{:link}}" target="_blank">{{:title}}</a></h2>
+          {{if headline}}
+            <p>{{:headline}}</p>
+          {{/if}}
+          <ul class="post-tags">
+            <!--<li><a href="#"><i class="fa fa-heart"></i>163 likes</a></li>-->
+            <!--<li><a href="#"><i class="fa fa-comment"></i>3 comments</a></li>-->
+            <li><a href="#"><i class="fa fa-calendar"></i>{{:date}}</a></li>
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
+  {{else}}
+    <div class="blog-post photo-post">
+      <div class="inner-post">
+        <img src="<%= Rails.application.config.assets_host %>{{:image}}"/>
+        <a href="{{:link}}" {{if external}}target="_blank"{{/if}}>
+        </a>
+      </div>
+    </div>
+  {{/if}}
 </script>
 
 <script id="Post-tmpl" type="text/x-jsrender">
