@@ -7,7 +7,9 @@ class VideosController < ApplicationController
   # @todo Os vídeos são carregados inicialmente através do seeder do rails,
   #       mas é importante que se possa efetuar uma atualização das informações
   #       de preferência através de uma interface de administração 
-  def index end
+  def index
+  end
+
   def page
     @videos = Video.limit(10)
                    .offset(10 * params[:offset].to_i - 20)
