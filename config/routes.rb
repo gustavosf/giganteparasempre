@@ -9,25 +9,20 @@ Rails.application.routes.draw do
     get 'gallery/:slug/page/:offset' => :page
   end
 
-  # Content
-  controller :content do
-    get 'content' => :index
-    get 'content/:slug' => :show
-    get 'content/:id/preview' => :preview
-  end
-
   # Videos
   controller :videos do
     get 'videos' => :index
     get 'videos/page/:offset' => :page
   end
 
+  # Homepage
   controller :home do
     get '/page/:offset' => :index_pager
     get 'gps-na-midia' => :gps_na_midia
     get 'gps-na-midia/page/:offset' => :gps_na_midia_pager
     get 'clipping' => :clipping
     get 'clipping/page/:offset' => :clipping_pager
+    get 'blog/:slug' => :blog
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
