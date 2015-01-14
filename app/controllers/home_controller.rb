@@ -10,7 +10,8 @@ class HomeController < ApplicationController
   #
   # @todo Ver um jeito de definir um ordenamento, possívelmente transformando
   #       o campo featured em uma data (featured_date)
-  def index end
+  def index 
+  end
   def index_pager
     @elements = Element.limit(10)
                        .where(homepage: true)
@@ -20,7 +21,8 @@ class HomeController < ApplicationController
   end
 
   # Clipping de notícias sobre as obras do Beira-Rio
-  def clipping end
+  def clipping
+  end
   def clipping_pager
     @links = Link.limit(6)
                  .where(group: 'clipping')
@@ -30,7 +32,8 @@ class HomeController < ApplicationController
   end
 
   # Clipping apenas com as vezes em que o GPS apareceu na mídia
-  def gps_na_midia end
+  def gps_na_midia
+  end
   def gps_na_midia_pager
     @links = Link.limit(6)
                  .where(group: 'gps-na-midia')
